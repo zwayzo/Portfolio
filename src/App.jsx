@@ -563,7 +563,7 @@ export default function Portfolio() {
       {/* Footer */}
       <footer className="border-t border-gray-800 py-8">
         <div className="max-w-6xl mx-auto px-4 text-center text-gray-500">
-          <p>© 2024 Your Name. Built with React & Tailwind CSS</p>
+          <p>© 2026 Azzeddine Mohammed. Built with React & Tailwind CSS</p>
         </div>
       </footer>
 
