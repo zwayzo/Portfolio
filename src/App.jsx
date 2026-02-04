@@ -24,6 +24,7 @@ import inception from './assets/inception.jpg'
 import linder from './assets/linder.png'
 import minishell from './assets/minishell.gif'
 import webserv from './assets/webserv.webp'
+import { code } from 'framer-motion/client';
 
 export default function Portfolio() {
   const [activeSection, setActiveSection] = useState('home');
@@ -156,7 +157,7 @@ export default function Portfolio() {
                 isVisible('hero-desc') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
               }`}
             >
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              A Wise man says once said The Talk is cheap, Show me the code.
             </p>
             <div 
               data-animate="hero-buttons"
@@ -182,7 +183,7 @@ export default function Portfolio() {
       </section>
 
       {/* About Section */}
-      <section id="about" className="min-h-screen flex items-center px-4 py-20">
+      <section id="about" className="px-4 py-20 flex items-center px-4 py-20">
         <div className="max-w-6xl mx-auto w-full">
           <h2 
             data-animate="about-title"
@@ -237,7 +238,7 @@ export default function Portfolio() {
       </section>
 
       {/* Projects Section */}
-      <section id="projects" className="min-h-screen px-4 py-20">
+      <section id="projects" className="px-4 py-20 px-4 py-20">
         <div className="max-w-6xl mx-auto">
           <h2 
             data-animate="projects-title"
@@ -273,19 +274,22 @@ export default function Portfolio() {
                 title: 'Web Application', 
                 tech: 'Js, Html/css, RestApi, Django, PostgreSql', 
                 desc: 'CyberPong is a web-based application centered around the classic game Pong, enabling users to play real-time multiplayer games and participate in tournaments. Designed to enhance technical expertise, this project offers opportunities to explore advanced features, such as user management, AI opponents, advanced graphics, and scalable infrastructure.',
-                image: cyberPong // Add your image path here
+                image: cyberPong, // Add your image path here
+                code: 'https://github.com/Bettercallous/CyberPong'
               },
               { 
                 title: 'Social Media Application', 
                 tech: 'Flask, React, RestApi, js, PostgreSQL, Sqlalchemy', 
                 desc: 'Linder is a web application that blends the professional networking features of LinkedIn with the swipe-based matching experience of Tinder The platform allows users to create detailed professional profiles and discover relevant connections based on industry, experience level, and interests. The goal of Linder is to make professional networking more intuitive, engaging, and human-centered',
-                image: linder // Add your image path here
+                image: linder, // Add your image path here
+                code: 'https://github.com/emohamedd/Linder'
               },
               { 
                 title: 'Institute Website', 
                 tech: 'wordpress, php, Drupal', 
                 desc: 'I built WordPress-based website developed to present institutional content in a clear, structured, and accessible way The project focuses on delivering a responsive design, easy content management, and a scalable structure that allows non-technical users to publish and update content efficiently',
-                image: iwri // Add your image path here
+                image: iwri, // Add your image path here
+                code: 'https://github.com/zwayzo/IWRI'
               }
             ].map((project, idx) => (
               <div
@@ -310,15 +314,31 @@ export default function Portfolio() {
                   {project.title}
                 </h4>
                 <p className="text-gray-400 text-sm mb-4">{project.desc}</p>
-                <div className="flex space-x-3">
-                  <button className="px-4 py-2 bg-transparent border border-purple-400 text-purple-400 rounded text-sm hover:bg-purple-400 hover:text-gray-900 transition-all flex items-center space-x-2 hover:scale-105">
-                    <span>Live</span>
-                    <ExternalLink className="w-3 h-3" />
-                  </button>
-                  <button className="px-4 py-2 bg-gray-700 text-gray-300 rounded text-sm hover:bg-gray-600 transition-all hover:scale-105">
-                    Code
-                  </button>
+               <div className="flex space-x-3">
+                  {project.live && (
+                    <a
+                      href={project.live}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="px-4 py-2 bg-transparent border border-purple-400 text-purple-400 rounded text-sm hover:bg-purple-400 hover:text-gray-900 transition-all flex items-center space-x-2 hover:scale-105"
+                    >
+                      <span>Live</span>
+                      <ExternalLink className="w-3 h-3" />
+                    </a>
+                  )}
+
+                  {project.code && (
+                    <a
+                      href={project.code}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="px-4 py-2 bg-gray-700 text-gray-300 rounded text-sm hover:bg-gray-600 transition-all hover:scale-105"
+                    >
+                      Code
+                    </a>
+                  )}
                 </div>
+
               </div>
             ))}
           </div>
@@ -347,18 +367,21 @@ export default function Portfolio() {
                 title: 'Inception', 
                 tech: 'Docker, Nginex, Mariadb, Wordpress', 
                 desc: 'Inception is a DevOps-focused project from the 42 CC cursus that consists of setting up a complete web infrastructure using Docker and Docker Compose. It includes containerized services such as Nginx, WordPress, and MariaDB, configured with secure networking, environment variables, and persistent volumes, following best DevOps practices.',
+                code: 'https://github.com/zwayzo/inception',
                 image: inception // Add your image path here
               },
               { 
                 title: 'Webserv', 
                 tech: 'c++98', 
                 desc: 'The Webserv project involves implementing a custom web server in C++, capable of handling multiple clients concurrently using non-blocking I/O. It supports HTTP methods such as GET, POST, and DELETE, serves static content, executes CGI scripts, and manages configuration through a custom config file format inspired by Nginx.',
+                code: 'https://github.com/zwayzo/webserv',
                 image: minishell // Add your image path here
               },
               { 
                 title: 'Minishell', 
                 tech: 'c', 
-                desc: 'he Minishell project consists of implementing a custom shell in C, supporting features such as command execution, pipelines, redirections, environment variables, and built-in commands. Special attention is given to signals, exit codes, and accurate Bash-like behavior.',
+                desc: 'The Minishell project consists of implementing a custom shell in C, supporting features such as command execution, pipelines, redirections, environment variables, and built-in commands. Special attention is given to signals, exit codes, and accurate Bash-like behavior.',
+                code: 'https://github.com/zwayzo/minishell-42',
                 image: webserv // Add your image path here
               }
             ].map((project, idx) => (
@@ -385,14 +408,31 @@ export default function Portfolio() {
                 </h4>
                 <p className="text-gray-400 text-sm mb-4">{project.desc}</p>
                 <div className="flex space-x-3">
-                  <button className="px-4 py-2 bg-transparent border border-purple-400 text-purple-400 rounded text-sm hover:bg-purple-400 hover:text-gray-900 transition-all flex items-center space-x-2 hover:scale-105">
-                    <span>Live</span>
-                    <ExternalLink className="w-3 h-3" />
-                  </button>
-                  <button className="px-4 py-2 bg-gray-700 text-gray-300 rounded text-sm hover:bg-gray-600 transition-all hover:scale-105">
-                    Code
-                  </button>
+                  {project.live && (
+                    <a
+                      href={project.live}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="px-4 py-2 bg-transparent border border-purple-400 text-purple-400 rounded text-sm hover:bg-purple-400 hover:text-gray-900 transition-all flex items-center space-x-2 hover:scale-105"
+                    >
+                      <span>Live</span>
+                      <ExternalLink className="w-3 h-3" />
+                    </a>
+                  )}
+
+                  {project.code && (
+                    <a
+                      href={project.code}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="px-4 py-2 bg-gray-700 text-gray-300 rounded text-sm hover:bg-gray-600 transition-all hover:scale-105"
+                    >
+                      Code
+                    </a>
+                  )}
                 </div>
+
+
               </div>
             ))}
             </div>
@@ -401,7 +441,7 @@ export default function Portfolio() {
       </section>
 
       {/* Skills Section */}
-      <section id="skills" className="min-h-screen px-4 py-20">
+      <section id="skills" className="px-4 py-32 px-4 py-32">
         <div className="max-w-6xl mx-auto">
           <h2 
             data-animate="skills-title"
@@ -513,7 +553,7 @@ export default function Portfolio() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="min-h-screen flex items-center px-4 py-20">
+      <section id="contact" className="px-4 py-32 flex items-center px-4 py-32">
         <div className="max-w-4xl mx-auto w-full text-center">
           <h2 
             data-animate="contact-title"
@@ -529,7 +569,7 @@ export default function Portfolio() {
               isVisible('contact-desc') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
             }`}
           >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            I’m always excited to collaborate on new projects or just chat about technology, design, or ideas. Whether you have a project in mind, a question, or just want to say hi, feel free to reach out.
           </p>
           <div 
             data-animate="contact-socials"
@@ -537,10 +577,16 @@ export default function Portfolio() {
               isVisible('contact-socials') ? 'opacity-100 scale-100' : 'opacity-0 scale-75'
             }`}
           >
-            {[Github, Linkedin, Mail].map((Icon, idx) => (
+            {[ 
+              { Icon: Github, href: "https://github.com/zwayzo" }, 
+              { Icon: Linkedin, href: "https://www.linkedin.com/in/azzeddine-mohammed-66125b274/" }, 
+              { Icon: Mail, href: "mailto:azzeddine.simohammed@gmail.com" } 
+            ].map(({ Icon, href }, idx) => (
               <a 
                 key={idx}
-                href="#" 
+                href={href} 
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-12 h-12 bg-gray-800 border border-gray-700 rounded-lg flex items-center justify-center hover:border-purple-400 hover:text-purple-400 transition-all hover:scale-125 hover:rotate-12"
                 style={{ transitionDelay: `${idx * 100}ms` }}
               >
