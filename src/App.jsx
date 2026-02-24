@@ -4,6 +4,7 @@ import { Menu, X, Github, Linkedin, Mail, ExternalLink, Code2 } from 'lucide-rea
 import pythonIcon from './assets/python.svg';
 import reactIcon from './assets/react.svg';
 import htmlIcon from './assets/html5.svg';
+import phpIcon from './assets/php.svg';
 import gitIcon from './assets/git.svg';
 import dockerIcon from './assets/docker.svg';
 import flaskIcon from './assets/flask.svg';
@@ -468,7 +469,8 @@ export default function Portfolio() {
                   { name: 'C', icon: <img src={cIcon} className="w-6 h-6 brightness-0 invert" alt="C" /> },
                   { name: 'cpp', icon: <img src={cppIcon} className="w-6 h-6 brightness-0 invert" alt="cpp" /> },
                   { name: 'Python', icon: <img src={pythonIcon} className="w-6 h-6 brightness-0 invert" alt="python" /> },
-                  { name: 'HTML/CSS', icon: <img src={htmlIcon} className="w-6 h-6 brightness-0 invert" alt="html" /> }
+                  { name: 'HTML/CSS', icon: <img src={htmlIcon} className="w-6 h-6 brightness-0 invert" alt="html" /> },
+                  { name: 'Php', icon: <img src={phpIcon} className="w-6 h-6 brightness-0 invert" alt="html" /> }
                 ]
               },
               { 
