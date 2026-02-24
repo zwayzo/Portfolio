@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Menu, X, Github, Linkedin, Mail, ExternalLink, Code2 } from 'lucide-react';
 // import jsIcon from './assets/javascript.svg';
 import pythonIcon from './assets/python.svg';
+import mysql from './assets/mysql.svg';
 import reactIcon from './assets/react.svg';
 import htmlIcon from './assets/html5.svg';
 import phpIcon from './assets/php.svg';
@@ -500,6 +501,7 @@ export default function Portfolio() {
                   { name: 'PostgreSQL', icon: <img src={postgresqlIcon} className="w-6 h-6 brightness-0 invert" alt="postgresql" /> },
                   { name: 'sqlalchem', icon: <img src={sqlalchemyIcon} className="w-6 h-6 brightness-0 invert" alt="sqlalchemyIcon" />},
                   { name: 'sqlite', icon: <img src={sqliteIcon} className="w-6 h-6 brightness-0 invert" alt="sqliteyIcon" />},
+                  { name: 'mysql', icon: <img src={mysql} className="w-6 h-6 brightness-0 invert" alt="sqliteyIcon" />},
                 ]
               }
             ].map((category, idx) => (
