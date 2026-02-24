@@ -24,6 +24,7 @@ import inception from './assets/inception.jpg'
 import linder from './assets/linder.png'
 import minishell from './assets/minishell.gif'
 import webserv from './assets/webserv.webp'
+import camagru from './assets/camagru.png'
 import { code } from 'framer-motion/client';
 
 export default function Portfolio() {
@@ -270,6 +271,13 @@ export default function Portfolio() {
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
+              { 
+                title: 'Camagru', 
+                tech: 'Js, Html/css, Php, MysQl', 
+                desc: 'Camagru is a full-stack web application inspired by social media platforms, designed to allow users to capture, edit, and share photos online. The project focuses on building a complete photo-sharing system from scratch, including user authentication, image manipulation, and social interactions such as likes and comments.',
+                image: camagru, // Add your image path here
+                code: 'https://github.com/zwayzo/camagru'
+              },
               { 
                 title: 'Web Application', 
                 tech: 'Js, Html/css, RestApi, Django, PostgreSql', 
