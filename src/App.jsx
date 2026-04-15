@@ -27,6 +27,8 @@ import linder from './assets/linder.png'
 import minishell from './assets/minishell.gif'
 import webserv from './assets/webserv.webp'
 import camagru from './assets/camagru.png'
+import flutterIcon from './assets/flutter.svg';
+import swiftyCompanion from './assets/swifty-companion.png';
 import { code } from 'framer-motion/client';
 
 export default function Portfolio() {
@@ -292,7 +294,7 @@ export default function Portfolio() {
                 tech: 'Flask, React, RestApi, js, PostgreSQL, Sqlalchemy', 
                 desc: 'Linder is a web application that blends the professional networking features of LinkedIn with the swipe-based matching experience of Tinder The platform allows users to create detailed professional profiles and discover relevant connections based on industry, experience level, and interests. The goal of Linder is to make professional networking more intuitive, engaging, and human-centered',
                 image: linder, // Add your image path here
-                code: 'https://github.com/emohamedd/Linder'
+                code: 'https://github.com/zwayzo/Matcha'
               },
               { 
                 title: 'Institute Website', 
@@ -300,6 +302,13 @@ export default function Portfolio() {
                 desc: 'I built WordPress-based website developed to present institutional content in a clear, structured, and accessible way The project focuses on delivering a responsive design, easy content management, and a scalable structure that allows non-technical users to publish and update content efficiently',
                 image: iwri, // Add your image path here
                 code: 'https://github.com/zwayzo/IWRI'
+              },
+              { 
+                title: 'Swifty Companion — Mobile Application Project', 
+                tech: 'Flutter, Dart', 
+                desc: 'Swifty Companion is a mobile application developed to explore mobile development concepts and interact with the 42 API. The app allows users to search for 42 students and view detailed information about their profiles in real time.',
+                image: swiftyCompanion, // Add your image path here
+                code: 'https://github.com/zwayzo/swifty-companion'
               }
             ].map((project, idx) => (
               <div
@@ -480,6 +489,7 @@ export default function Portfolio() {
                   { name: 'React', icon: <img src={reactIcon} className="w-6 h-6 brightness-0 invert" alt="react" /> },
                   { name: 'Django', icon: <img src={djangoIcon} className="w-6 h-6 brightness-0 invert" alt="django" /> },
                   { name: 'Flask', icon: <img src={flaskIcon} className="w-6 h-6 brightness-0 invert" alt="flask" /> },
+                  { name: 'Flutter', icon: <img src={flutterIcon} className="w-6 h-6 brightness-0 invert" alt="flutter" /> },
                   // { name: 'Express', icon: '🚂' }
                 ]
               },
@@ -621,7 +631,7 @@ export default function Portfolio() {
       {/* Footer */}
       <footer className="border-t border-gray-800 py-8">
         <div className="max-w-6xl mx-auto px-4 text-center text-gray-500">
-          <p>© 2026 Azzeddine Mohammed. Built with React & Tailwind CSS</p>
+          <p>© 2026 Azzeddine Mohammed.</p>
         </div>
       </footer>
 
