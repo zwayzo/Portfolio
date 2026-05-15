@@ -199,7 +199,7 @@ export default function Portfolio() {
     { num:'03', icon:'💜', title:'Matcha (Linder)', tech:'Flask · PostgreSQL · ReactJS · SocketIO', desc:'Plateforme de rencontre full-stack avec algorithme de matching multicritère, notifications temps réel Flask-SocketIO, auth OAuth et protection XSS/CSRF/SQL.', code:'https://github.com/zwayzo/Matcha', img: linder },
     { num:'04', icon:'🌍', title:'IWRI Website', tech:'WordPress · PHP · Drupal', desc:'Site institutionnel responsive avec gestion de contenu avancée, conçu pour des utilisateurs non-techniques. Structure scalable et SEO-friendly.', code:'https://github.com/zwayzo/IWRI', img: iwri },
     { num:'05', icon:'📸', title:'Camagru', tech:'PHP · Laravel · MySQL · Canvas API', desc:'App de partage de photos : MVC from scratch en PHP, filtres Canvas JS temps réel, système de likes, commentaires live et notifications e-mail.', code:'https://github.com/zwayzo/camagru', img: camagru },
-    { num:'06', icon:'📱', title:'Swifty Companion', tech:'Flutter · Dart · 42 API', desc:'App mobile Flutter pour explorer les profils étudiants 42 via l\'API officielle. Recherche en temps réel, affichage des projets, niveaux et skills.', code:'https://github.com/zwayzo/swifty-companion', img: swiftyCompanion },
+    { num:'06', icon:'📱', title:'Weather App', tech:'Flutter · Dart · Weather API', desc:'fully responsive weather application using Flutter with Real-time geolocation, City search with suggestions, Current weather conditions, Hourly - Weekely forecast ,Temperature charts & curves', code:'https://github.com/zwayzo/swifty-companion', img: swiftyCompanion },
   ];
 
   const PROJECTS_SMALL = [
