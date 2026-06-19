@@ -1,43 +1,71 @@
-* { cursor: none; }
+/* App.css — Portfolio-specific resets & global base */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  cursor: none; /* custom cursor handled in Portfolio.jsx */
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background: #030712;
+  color: #f1f5f9;
+  font-family: 'Space Grotesk', sans-serif;
+  min-height: 100dvh;
+  overflow-x: hidden;
+}
+
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  /* Remove Vite defaults — let Portfolio.jsx control layout */
+  max-width: unset;
+  margin: unset;
+  padding: unset;
+  text-align: unset;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 4px;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+::-webkit-scrollbar-track {
+  background: #030712;
 }
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+::-webkit-scrollbar-thumb {
+  background: rgba(79, 142, 247, 0.3);
+  border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(79, 142, 247, 0.6);
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Selection */
+::selection {
+  background: rgba(79, 142, 247, 0.25);
+  color: #f1f5f9;
+}
+
+/* Hide mobile-only nav button on desktop, show on mobile */
+@media (max-width: 768px) {
+  .hidden-mobile {
+    display: none !important;
   }
-  to {
-    transform: rotate(360deg);
+  .mobile-menu-btn {
+    display: block !important;
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+/* Respect reduced-motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
   }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
 }
