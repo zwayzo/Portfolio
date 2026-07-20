@@ -194,17 +194,18 @@ export default function Portfolio() {
   const NAV_ITEMS = ['about', 'experience', 'projects', 'skills', 'contact'];
 
   const PROJECTS_MAIN = [
-    { num:'01', icon:'⚡', title:'WebServ', tech:'C++ · POSIX · HTTP/1.1 · Linux', desc:'Serveur HTTP/1.1 from scratch à l\'École 1337. GET/POST/DELETE, I/O non-bloquante (select()), exécution CGI, chunked transfer, virtual hosts. Maîtrise profonde des protocoles réseau bas niveau.', code:'https://github.com/zwayzo/webserv', img: webserv },
-    { num:'02', icon:'🏓', title:'CyberPong', tech:'Django · WebSockets · Docker · JS', desc:'Jeu multijoueur temps réel (Django Channels). Moteur de tournoi, matchmaking, classements persistants, chat privé. CI/CD Docker automatisé.', code:'https://github.com/Bettercallous/CyberPong', img: cyberPong },
-    { num:'03', icon:'💜', title:'Matcha (Linder)', tech:'Flask · PostgreSQL · ReactJS · SocketIO', desc:'Plateforme de rencontre full-stack avec algorithme de matching multicritère, notifications temps réel Flask-SocketIO, auth OAuth et protection XSS/CSRF/SQL.', code:'https://github.com/zwayzo/Matcha', img: linder },
-    { num:'04', icon:'🌍', title:'IWRI Website', tech:'WordPress · PHP · Drupal', desc:'Site institutionnel responsive avec gestion de contenu avancée, conçu pour des utilisateurs non-techniques. Structure scalable et SEO-friendly.', code:'https://github.com/zwayzo/IWRI', img: iwri },
-    { num:'05', icon:'📸', title:'Camagru', tech:'PHP · Laravel · MySQL · Canvas API', desc:'App de partage de photos : MVC from scratch en PHP, filtres Canvas JS temps réel, système de likes, commentaires live et notifications e-mail.', code:'https://github.com/zwayzo/camagru', img: camagru },
-    { num:'06', icon:'📱', title:'Weather App', tech:'Flutter · Dart · Weather API', desc:'fully responsive weather application using Flutter with Real-time geolocation, City search with suggestions, Current weather conditions, Hourly - Weekely forecast ,Temperature charts & curves', code:'https://github.com/zwayzo/swifty-companion', img: swiftyCompanion },
+    { num:'01', icon:'🎩', title:'DSLR — Sorting Hat Classifier', tech:'Python · Logistic Regression · Pandas · Matplotlib', desc:'Multi-class one-vs-all logistic regression trained from scratch with gradient descent to sort students into houses from their grades. Custom statistics toolkit reimplementing describe() without built-in stats functions, plus histograms, scatter and pair plots to guide feature selection.', code:'https://github.com/zwayzo/dslr' },
+    { num:'02', icon:'⚡', title:'WebServ', tech:'C++ · POSIX · HTTP/1.1 · Linux', desc:'HTTP/1.1 server built from scratch at École 1337. GET/POST/DELETE, non-blocking I/O (select()), CGI execution, chunked transfer, virtual hosts. Deep mastery of low-level network protocols.', code:'https://github.com/zwayzo/webserv', img: webserv },
+    { num:'03', icon:'🏓', title:'CyberPong', tech:'Django · WebSockets · Docker · JS', desc:'Real-time multiplayer game (Django Channels). Tournament engine, matchmaking, persistent leaderboards, private chat. Automated Docker CI/CD.', code:'https://github.com/Bettercallous/CyberPong', img: cyberPong },
+    { num:'04', icon:'💜', title:'Matcha (Linder)', tech:'Flask · PostgreSQL · ReactJS · SocketIO', desc:'Full-stack dating platform with a multi-criteria matching algorithm, real-time notifications via Flask-SocketIO, OAuth auth, and XSS/CSRF/SQL protection.', code:'https://github.com/zwayzo/Matcha', img: linder },
+    { num:'05', icon:'🌍', title:'IWRI Website', tech:'WordPress · PHP · Drupal', desc:'Responsive institutional site with advanced content management, designed for non-technical users. Scalable, SEO-friendly structure.', code:'https://github.com/zwayzo/IWRI', img: iwri },
+    { num:'06', icon:'📸', title:'Camagru', tech:'PHP · Laravel · MySQL · Canvas API', desc:'Photo-sharing app: MVC built from scratch in PHP, real-time Canvas JS filters, likes system, live comments, and email notifications.', code:'https://github.com/zwayzo/camagru', img: camagru },
+    { num:'07', icon:'📱', title:'Weather App', tech:'Flutter · Dart · Weather API', desc:'Fully responsive weather application built with Flutter: real-time geolocation, city search with suggestions, current conditions, hourly/weekly forecast, temperature charts & curves.', code:'https://github.com/zwayzo/swifty-companion', img: swiftyCompanion },
   ];
 
   const PROJECTS_SMALL = [
-    { num:'07', icon:'🐋', title:'Inception', tech:'Docker · Nginx · MariaDB · WordPress', desc:'Infrastructure multi-services conteneurisée : TLS, reverse proxy, volumes persistants, provisionnement complet via Makefile + Docker Compose.', code:'https://github.com/zwayzo/inception', img: inception },
-    { num:'08', icon:'🖥️', title:'Minishell', tech:'C · POSIX · Bash', desc:'Shell custom en C supportant pipes, redirections, variables d\'environnement, built-ins et gestion fine des signaux — comportement fidèle à Bash.', code:'https://github.com/zwayzo/minishell-42', img: minishell },
+    { num:'08', icon:'🐋', title:'Inception', tech:'Docker · Nginx · MariaDB · WordPress', desc:'Containerized multi-service infrastructure: TLS, reverse proxy, persistent volumes, fully automated provisioning via Makefile + Docker Compose.', code:'https://github.com/zwayzo/inception', img: inception },
+    { num:'09', icon:'🖥️', title:'Minishell', tech:'C · POSIX · Bash', desc:'Custom shell in C supporting pipes, redirections, environment variables, built-ins, and fine-grained signal handling — behaves faithfully like Bash.', code:'https://github.com/zwayzo/minishell-42', img: minishell },
   ];
 
   const SKILLS = [
@@ -325,17 +326,17 @@ export default function Portfolio() {
             {/* Available badge */}
             <div className="fade-up" style={{ display:'inline-flex', alignItems:'center', gap:8, padding:'6px 14px', borderRadius:100, background:'rgba(34,197,94,0.1)', border:'1px solid rgba(34,197,94,0.2)', fontFamily:'JetBrains Mono,monospace', fontSize:11, color:'#22c55e', marginBottom:24 }}>
               <div className="avail-dot" style={{ width:6, height:6, borderRadius:'50%', background:'#22c55e' }} />
-              Available for alternance 2026–2027
+              Open to a 6-month internship or work-study program
             </div>
             <div className="fade-up" style={{ display:'inline-flex', alignItems:'center', gap:8, padding:'6px 14px', borderRadius:100, background:'rgba(34,197,94,0.1)', border:'1px solid rgba(34,197,94,0.2)', fontFamily:'JetBrains Mono,monospace', fontSize:11, color:'#22c55e', marginBottom:24 }}>
               <div className="avail-dot" style={{ width:6, height:6, borderRadius:'50%', background:'#22c55e' }} />
-              Available for internships in 2026(6 months)
+              Immediate availability
             </div>
 
             {/* Label */}
             <div className="fade-up d1" style={{ fontFamily:'JetBrains Mono,monospace', fontSize:12, color:'#06b6d4', letterSpacing:'0.2em', textTransform:'uppercase', marginBottom:20, display:'flex', alignItems:'center', gap:10 }}>
               <div style={{ width:40, height:1, background:'#06b6d4' }} />
-              Full-Stack Engineer · École 42 Lyon
+              Software Engineer · École 42 Lyon
             </div>
 
             {/* Name */}
@@ -366,7 +367,7 @@ export default function Portfolio() {
 
             {/* Stats */}
             <div className="fade-up d5" style={{ display:'flex', gap:40, marginTop:60, paddingTop:40, borderTop:'1px solid rgba(79,142,247,0.1)', flexWrap:'wrap' }}>
-              {[['3','internships'],['8+','projects shipped'],['95%','AI precision'],['42','école']].map(([n,l]) => (
+              {[['3','internships'],['8+','projects shipped'],['95%','AI precision'],['42','school']].map(([n,l]) => (
                 <div key={l}>
                   <div style={{ fontSize:32, fontWeight:700, color:'#f1f5f9', lineHeight:1 }}>{n}</div>
                   <div style={{ fontFamily:'JetBrains Mono,monospace', fontSize:11, color:'#64748b', marginTop:4 }}>{l}</div>
@@ -400,10 +401,10 @@ export default function Portfolio() {
             </div>
             <div>
               <p style={{ fontSize:15, lineHeight:1.9, color:'#64748b', marginBottom:20 }}>
-                Ingénieur logiciel formé à l'<strong style={{ color:'#f1f5f9' }}>École 1337 / UM6P</strong> au Maroc et actuellement à l'<strong style={{ color:'#f1f5f9' }}>École 42 Lyon</strong> (RNCP niv. 7). Je construis des produits backend robustes, des pipelines IA, et des architectures cloud-native.
+                Software Engineer with solid full-stack development experience (<strong style={{ color:'#f1f5f9' }}>Django, Flask, React.js, C/C++, Docker</strong>) gained through several internships. Comfortable in <strong style={{ color:'#f1f5f9' }}>Agile/Scrum</strong> environments and DevOps practices (CI/CD, Git).
               </p>
               <p style={{ fontSize:15, lineHeight:1.9, color:'#64748b', marginBottom:20 }}>
-                Curieux par nature, j'explore autant les systèmes bas niveau (<strong style={{ color:'#f1f5f9' }}>C/C++, POSIX</strong>) que les intégrations IA (<strong style={{ color:'#f1f5f9' }}>OpenAI, RAG</strong>) et le développement mobile <strong style={{ color:'#f1f5f9' }}>Flutter</strong>.
+                Currently pursuing a <strong style={{ color:'#f1f5f9' }}>Digital Architecture Engineering degree (RNCP 7)</strong> at <strong style={{ color:'#f1f5f9' }}>École 42 Lyon</strong>, seeking a work-study program or a 6-month internship to contribute to ambitious projects.
               </p>
               {/* Terminal box */}
               <div style={{ background:'rgba(10,15,30,0.8)', border:'1px solid rgba(79,142,247,0.15)', borderRadius:10, padding:24, fontFamily:'JetBrains Mono,monospace', fontSize:12 }}>
@@ -415,7 +416,7 @@ export default function Portfolio() {
                   </div>
                 ))}
                 <div style={{ marginTop:12, display:'flex', flexWrap:'wrap', gap:6 }}>
-                  {['Arabe 🇲🇦','Français 🇫🇷','English 🇬🇧'].map(l => (
+                  {['Arabic 🇲🇦','French 🇫🇷','English 🇬🇧'].map(l => (
                     <span key={l} style={{ background:'rgba(255,255,255,0.05)', padding:'2px 8px', borderRadius:3, color:'#f1f5f9' }}>{l}</span>
                   ))}
                 </div>
@@ -434,17 +435,17 @@ export default function Portfolio() {
 
           <div style={{ position:'relative', paddingLeft:24, borderLeft:'1px solid rgba(79,142,247,0.3)' }}>
             {[
-              { date:'Fév – Août 2025', role:'Backend & AI Developer — Intern', co:'Institut International de Recherche sur l\'Eau (IWRI) · Rabat, Maroc', bullets:[
-                'Intégration API OpenAI (ChatGPT) — transformation d\'un POC en outil adopté par les équipes métier',
-                'Micro-services Python (Flask/Django) + API REST + JWT → +30% performance (Redis, indexation BDD)',
-                'Pipelines CI/CD Docker Compose complets · documentation & accompagnement utilisateurs',
+              { date:'Feb – Aug 2025', role:'Software Engineer — Intern', co:'Institut International des Recherches dans l\'Eau (IWRI) · Rabat, Morocco', bullets:[
+                'Designed and deployed 2 full-stack web apps in production: RESTful Django API with JWT auth, permission management, Swagger docs; +30% performance via N+1 optimization, SQL indexing, Redis caching',
+                'Containerized microservices architecture (Docker Compose): Nginx reverse proxy, automated CI/CD pipelines, dev/prod separation, service monitoring',
+                'Custom WordPress development: custom themes & plugins, third-party API integration, SEO optimization (Lighthouse > 90)',
               ]},
-              { date:'Mai – Juil 2022', role:'AI Systems Developer — Intern', co:'CHU Mohammed VI · Oujda, Maroc', bullets:[
-                'Pipeline Python + OpenCV + CNN → 95% de précision déployé sur caméras de surveillance',
-                'Automatisation multi-flux vidéo · scripts Bash de supervision Linux',
+              { date:'May – Jul 2022', role:'Software Engineer — Intern', co:'CHU Mohammed VI · Oujda, Morocco', bullets:[
+                'Developed a real-time Computer Vision system (Python, OpenCV, CNN) for face mask detection — 95% accuracy, deployed on surveillance cameras and embedded hardware',
+                'Automated compliance checks across multiple simultaneous video feeds, significantly reducing manual interventions',
               ]},
-              { date:'Juin – Juil 2021', role:'Front-End Developer — Intern', co:'SQLI · Oujda, Maroc', bullets:[
-                'Features HTML/CSS/JS en Scrum · GitLab CI/CD · revues de code',
+              { date:'Jun – Jul 2021', role:'Software Engineer — Intern', co:'SQLI · Oujda, Morocco', bullets:[
+                'Front-end development (HTML/CSS/JS) within a Scrum team: sprints, code reviews, feature delivery, CI/CD workflows',
               ]},
             ].map((exp, i) => (
               <div key={i} style={{ position:'relative', marginBottom:48, paddingLeft:24 }}>
@@ -477,8 +478,12 @@ export default function Portfolio() {
             {PROJECTS_MAIN.map((p) => (
               <div key={p.num} className="proj-card" style={{ background:'#0a0f1e', padding:28, position:'relative', border:'1px solid rgba(79,142,247,0.08)' }}>
                 {/* Project image */}
-                <div style={{ width:'100%', height:140, borderRadius:8, overflow:'hidden', marginBottom:16, background:'#030712' }}>
-                  <img src={p.img} alt={p.title} style={{ width:'100%', height:'100%', objectFit:'cover', opacity:0.85 }} />
+                <div style={{ width:'100%', height:140, borderRadius:8, overflow:'hidden', marginBottom:16, background:'#030712', display:'flex', alignItems:'center', justifyContent:'center' }}>
+                  {p.img ? (
+                    <img src={p.img} alt={p.title} style={{ width:'100%', height:'100%', objectFit:'cover', opacity:0.85 }} />
+                  ) : (
+                    <span style={{ fontSize:40, opacity:0.5 }}>{p.icon}</span>
+                  )}
                 </div>
                 <div style={{ position:'absolute', top:20, right:20, fontSize:20 }}>{p.icon}</div>
                 <div style={{ fontFamily:'JetBrains Mono,monospace', fontSize:11, color:'#64748b', marginBottom:8 }}>{p.num}</div>
@@ -551,7 +556,7 @@ export default function Portfolio() {
               <span className="shimmer-text">something great</span>
             </h2>
             <p style={{ fontSize:15, color:'#64748b', marginBottom:40, maxWidth:480, margin:'0 auto 40px' }}>
-              Ouvert à une alternance 2026–2027 ou un stage 6 mois. N'hésitez pas à me contacter pour discuter d'un projet ou d'une opportunité.
+              Open to a 6-month internship or a work-study program (2 weeks company / 1 week school). Feel free to reach out to discuss a project or an opportunity.
             </p>
             <div style={{ display:'flex', justifyContent:'center', gap:12, flexWrap:'wrap' }}>
               {[
